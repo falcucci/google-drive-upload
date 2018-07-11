@@ -119,7 +119,8 @@ function createDirectory(){
 	ACCESS_TOKEN="$3"
 	FOLDER_ID=""
     QUERY="mimeType='application/vnd.google-apps.folder' and title='$DIRNAME'"
-    QUERY=$(echo $QUERY | sed -f https://raw.githubusercontent.com/falcucci/google-drive-upload/master/url_escape.sed)
+    QUERY=$(echo $QUERY | sed https://raw.githubusercontent.com/falcucci/google-drive-upload/master/url_escape
+    )
 
 	SEARCH_RESPONSE=`/usr/bin/curl \
 					--silent \
